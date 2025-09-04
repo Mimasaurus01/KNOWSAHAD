@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>KNOW SAHAD - AI Hospital Navigator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="title_ribbon">
+      <h2>
+        <b>KNOW SAHAD</b>
+      </h2>
+      <p style="font-family: Arial, Helvetica, sans-serif">AI Hospital Navigator</p>
+      <img src="images/images.jpeg" alt="Sahad Hospital Logo" class="logo" />
+    </div>
+
+    <div class="container py-5">
+      <!-- Connection Status -->
+      <div id="connectionStatus" class="connection-status"></div>
+
+      <div class="chat-box d-flex flex-column mb-3" id="chatBox">
+        <!-- Welcome message -->
+        <div class="chat-message bot">
+          <div class="message bot-response">
+            🏥 <strong>Welcome to Sahad Hospital!</strong>
+
+I'm your AI navigation assistant. I can help you find:
+• Departments and clinics
+• Laboratory services
+• Emergency facilities  
+• Pharmacy and billing
+• Restrooms and amenities
+
+Just ask me "Where is the emergency room?" or "Find the laboratory" and I'll guide you there! 
+
+How can I help you navigate our hospital today?
+          </div>
+        </div>
+      </div>
+
+      <!-- Enhanced typing indicator -->
+      <div class="typing-indicator" id="typingIndicator">
+        <div class="message">
+          <span class="ai-icon">🤖</span>
+          <span class="thinking-text">AI is thinking</span>
+          <div class="typing-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+
+      <form id="chatForm" class="input-group">
+        <input
+          type="text"
+          id="userInput"
+          class="form-control"
+          placeholder="Ask me about hospital locations..."
+          required
+        />
+        <button class="btn btn-success" type="submit" id="sendButton">Send</button>
+      </form>
+    </div>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="image-modal" onclick="closeImageModal()">
+      <span class="close-modal" onclick="closeImageModal()">&times;</span>
+      <img class="modal-content" id="modalImage">
+    </div>
+
+    <footer style="margin: 20px">
+      <small style="color: white">Your care is our priority</small>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
